@@ -11,6 +11,7 @@ import java.nio.file.Files;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
@@ -567,13 +568,15 @@ public class JFrameXML extends javax.swing.JFrame {
             File file = jFileChooserXML.getSelectedFile();         
             try {
                 jTextAreaXML2.setText(
-                        new String(Files.readAllBytes(file.toPath())));
+                new String(Files.readAllBytes(file.toPath())));
                 // jLabel9.setText(file.getName());
                 if(controller == null) {
                     controller = new Controller(file);      
                 } else {
                     controller.setFile(file);  // AQUI CREO QUE ES setFileXML ?????????????
                 }
+                
+                
                 
                 
                 /* COPIADO DE JUANGU. CREO QUE VA EN EL BOTON "Cargar XSLT"
@@ -599,6 +602,13 @@ public class JFrameXML extends javax.swing.JFrame {
             }
         } else {
             // log.append("Open command cancelled by user." + newline); 
+        JOptionPane.showMessageDialog(null,"Archivo no cargado.", "Mensaje de error",
+            JOptionPane.ERROR_MESSAGE);
+
+            if (JOptionPane.showConfirmDialog (null, "Desea Salir de la aplicación?","WARNING",
+                     JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION){
+             System.exit(0);
+            }
         }
         // log.setCaretPosition(log.getDocument().getLength());         
     }//GEN-LAST:event_jButtonCargarXML2ActionPerformed
@@ -633,6 +643,13 @@ public class JFrameXML extends javax.swing.JFrame {
                 Logger.getLogger(JFrameXML.class.getName()).log(Level.SEVERE, null, ex);
             }
         } else {
+            JOptionPane.showMessageDialog(null,"Archivo no cargado.", "Mensaje de error",
+            JOptionPane.ERROR_MESSAGE);
+
+            if (JOptionPane.showConfirmDialog (null, "Desea Salir de la aplicación?","WARNING",
+                     JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION){
+             System.exit(0);
+            }
             // log.append("Open command cancelled by user." + newline); 
         }
         // log.setCaretPosition(log.getDocument().getLength());
@@ -659,6 +676,13 @@ public class JFrameXML extends javax.swing.JFrame {
                 Logger.getLogger(JFrameXML.class.getName()).log(Level.SEVERE, null, ex);
             }
         } else {
+            JOptionPane.showMessageDialog(null,"Archivo no cargado.", "Mensaje de error",
+            JOptionPane.ERROR_MESSAGE);
+
+            if (JOptionPane.showConfirmDialog (null, "Desea Salir de la aplicación?","WARNING",
+                     JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION){
+             System.exit(0);
+            }
             // log.append("Open command cancelled by user." + newline); 
         }
         // log.setCaretPosition(log.getDocument().getLength());
@@ -688,6 +712,13 @@ public class JFrameXML extends javax.swing.JFrame {
                 Logger.getLogger(JFrameXML.class.getName()).log(Level.SEVERE, null, ex);
             }
         } else {
+            JOptionPane.showMessageDialog(null,"Archivo no cargado.", "Mensaje de error",
+            JOptionPane.ERROR_MESSAGE);
+
+            if (JOptionPane.showConfirmDialog (null, "Desea Salir de la aplicación?","WARNING",
+                     JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION){
+             System.exit(0);
+            }
             // log.append("Open command cancelled by user." + newline); 
         }
         // log.setCaretPosition(log.getDocument().getLength());
@@ -712,6 +743,13 @@ public class JFrameXML extends javax.swing.JFrame {
                 Logger.getLogger(JFrameXML.class.getName()).log(Level.SEVERE, null, ex);
             }
         } else {
+            JOptionPane.showMessageDialog(null,"Archivo no cargado.", "Mensaje de error",
+            JOptionPane.ERROR_MESSAGE);
+
+            if (JOptionPane.showConfirmDialog (null, "Desea Salir de la aplicación?","WARNING",
+                     JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION){
+             System.exit(0);
+            }
             // log.append("Open command cancelled by user." + newline); 
         }
         // log.setCaretPosition(log.getDocument().getLength());
@@ -736,6 +774,13 @@ public class JFrameXML extends javax.swing.JFrame {
                 Logger.getLogger(JFrameXML.class.getName()).log(Level.SEVERE, null, ex);
             }
         } else {
+            JOptionPane.showMessageDialog(null,"Archivo no cargado.", "Mensaje de error",
+            JOptionPane.ERROR_MESSAGE);
+
+            if (JOptionPane.showConfirmDialog (null, "Desea Salir de la aplicación?","WARNING",
+                     JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION){
+             System.exit(0);
+            }
             // log.append("Open command cancelled by user." + newline); 
         }
         // log.setCaretPosition(log.getDocument().getLength()); 
